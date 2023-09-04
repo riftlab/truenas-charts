@@ -1,0 +1,29 @@
+image:
+  repository: wazuh/wazuh-manager
+  pullPolicy: IfNotPresent
+  tag: 4.8.0
+
+indexerImage:
+  repository: wazuh/wazuh-indexer
+  pullPolicy: IfNotPresent
+  tag: 4.8.0
+
+dashboardImage:
+  repository: wazuh/wazuh-dashboard
+  pullPolicy: IfNotPresent
+  tag: 4.8.0
+
+resources:
+  limits:
+    cpu: 4000m
+    memory: 8Gi
+
+wazuhNetwork:
+  webPort: 30067
+
+wazuhStorage:
+
+# TODO: Check this
+wazuhRunAs:
+  user: 568
+  group: 568
