@@ -347,6 +347,24 @@ questions:
                         required: true
                         min: 1
                         default: 1
+                    - variable: aclEntriesIxVolume
+                      label: ACL Entries
+                      schema:
+                        type: dict
+                        key_in_the_parent_dict_to_get_the_path: ixVolume://datasetName
+                        show_if: [["type", "=", "ixVolume"]]
+                        $ref:
+                          - "normalize/acl"
+                        attrs: []
+                    - variable: aclEntriesHostPath
+                      label: ACL Entries
+                      schema:
+                        type: dict
+                        key_in_the_parent_dict_to_get_the_path: hostPath
+                        show_if: [["type", "=", "hostPath"]]
+                        $ref:
+                          - "normalize/acl"
+                        attrs: []
   - variable: resources
     group: Resources Configuration
     label: ""
